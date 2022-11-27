@@ -1,0 +1,70 @@
+/* Variables */
+$main-color: #fff;
+$add-color: #fed136;
+$font-text: 'Montserrat', sans-serif;
+$font-handwrite: 'Tangerine', cursive;
+
+
+
+/* Global */
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+body {
+    margin: 0 auto;
+    font-family: $font-text;
+}
+a { 
+    text-decoration: none;
+    color: $main-color;
+}
+
+/* Splash */
+.splash {
+    background-image: url("../images/splash.jpg");
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+.nav-list {
+    ul {
+        list-style-type: none;
+        margin-top: 0;
+        font-size: 14px;
+        a:hover {
+            color: $add-color;
+        }
+        li {
+            display: inline-block;
+            position: relative;
+            margin-left: 50px;
+            li {
+                display: block;
+                width: 100px;
+			    margin: 0;
+			    text-align: center;
+			    padding: 5px 0;
+            }
+        ul {
+            display: none; 
+        }
+        }
+    }
+}
+.nav-list li:hover ul {
+	display: block;
+	position: absolute;
+    background: #bdc3c7;
+	left: 50%;
+	transform: translateX(-50%);
+	padding-left: 0;
+}
+.logo {
+    font-family: $font-handwrite;
+    font-size: 36px;
+    letter-spacing: 1px;
+    a {
+        color: $add-color;
+    }
+}
