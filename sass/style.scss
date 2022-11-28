@@ -1,19 +1,18 @@
 /* Variables */
 $main-color: #fff;
 $add-color: #fed136;
-$font-text: 'Montserrat', sans-serif;
-$font-subtitles: 'Droid-serif';
+$text-color: #777777;
+$font-text: "Montserrat", sans-serif;
+$font-subtitles: "Droid-serif";
 
 @font-face {
-    font-family: 'Wisdom Script Regular';
-    src: url('../fonts/Wisdom\ Script\ Regular\ 400.otf');
+	font-family: "Wisdom Script Regular";
+	src: url("../fonts/Wisdom\ Script\ Regular\ 400.otf");
 }
 @font-face {
-    font-family: 'Droid-serif';
-    src: url('../fonts/DroidSerif-Italic.ttf');
+	font-family: "Droid-serif";
+	src: url("../fonts/DroidSerif-Italic.ttf");
 }
-
-
 
 /* Global */
 *::before,
@@ -21,67 +20,76 @@ $font-subtitles: 'Droid-serif';
 	box-sizing: border-box;
 }
 body {
-    margin: 0 auto;
-    font-family: $font-text;
-    
+	margin: 0 auto;
+	font-family: $font-text;
 }
-a { 
-    text-decoration: none;
-    color: $main-color;
+a {
+	text-decoration: none;
+	color: $main-color;
 }
+p {
+	color: $text-color;
+}
+.headline {
+	text-align: center;
 
+	.title {
+		font-size: 40px;
+		margin-bottom: 0;
+	}
+}
 .subtitle {
-    font-family: $font-subtitles;
+	font-family: $font-subtitles;
 }
 
 /* Splash */
 .nav-list {
-    ul {
-        list-style-type: none;
-        margin-top: 0;
-        font-size: 14px;
-        a:hover {
-            color: $add-color;
-        }
-        
-        li {
-            display: inline-block;
-            position: relative;
-            margin-left: 50px;
-            li {
-                display: block;
-                width: 100px;
-			    margin: 0;
-			    text-align: center;
-			    padding: 5px 0;
-            }
-        ul {
-            display: none; 
-        }
-        }
-    }
+	ul {
+		list-style-type: none;
+		margin-top: 0;
+		font-size: 14px;
+		a:hover {
+			color: $add-color;
+		}
+
+		li {
+			display: inline-block;
+			position: relative;
+			margin-left: 40px;
+			li {
+				display: block;
+				width: 100px;
+				margin: 0;
+				text-align: center;
+				padding: 5px 0;
+			}
+			ul {
+				display: none;
+			}
+		}
+	}
 }
 .nav-list li:hover ul {
 	display: block;
 	position: absolute;
-    background: #bdc3c7;
+	background: #bdc3c7;
 	left: 50%;
 	transform: translateX(-50%);
 	padding-left: 0;
 }
 .logo {
-    font-family: 'Wisdom Script Regular';
-    font-size: 24px;
-    letter-spacing: 1px;
-    a {
-        color: $add-color;
-    }
+	font-family: "Wisdom Script Regular";
+	font-size: 24px;
+	letter-spacing: 1px;
+	a {
+		color: $add-color;
+	}
 }
 .splash {
-    background-image: url("../images/splash.jpg");
-    height: 100vh;
-    width: 100%;
-    position: relative;
+	background-image: url("../images/splash.jpg");
+	height: 100vh;
+	width: 100%;
+	position: relative;
 }
 .splash-inner {
 	position: absolute;
@@ -90,29 +98,50 @@ a {
 	transform: translate(-50%, -50%);
 	text-align: center;
 	color: $main-color;
-    .subtitle {
-        font-size: 40px;
-        letter-spacing: -1px;
-    }
-    .splash-title {
-        font-size: 65px;
-        letter-spacing: -2px;
-        font-weight: 700;
-    }
+	.subtitle {
+		font-size: 40px;
+		letter-spacing: -1px;
+	}
+	.splash-title {
+		font-size: 65px;
+		letter-spacing: -2px;
+		font-weight: 700;
+	}
 }
 button {
-    background-color: $add-color;
-    width: 200px;
-    height: 60px;
-    border-radius: 3px;
-    border-color: $add-color;
+	background-color: $add-color;
+	width: 200px;
+	height: 60px;
+	border-radius: 3px;
+	border-color: $add-color;
 }
 .btn {
-   
-    
-    font-weight: 700;
-    &:hover {
-        color: #000;
+	font-weight: 700;
+	&:hover {
+		color: #000;
+	}
+}
 
+/* Services */
+
+.card {
+    text-align: center;
+    h5 {
+        font-size: 18px;
     }
+    p {
+        font-size: 14px;
+    }
+    i {
+        color: $add-color;
+        height: 66px;
+        width: 66px;
+        font-size: 30px;
+        border: 3px solid $add-color;
+        border-radius: 50%;
+        line-height: 2;
+       
+        
+    }
+
 }
