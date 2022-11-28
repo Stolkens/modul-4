@@ -2,7 +2,16 @@
 $main-color: #fff;
 $add-color: #fed136;
 $font-text: 'Montserrat', sans-serif;
-$font-handwrite: 'Tangerine', cursive;
+$font-subtitles: 'Droid-serif';
+
+@font-face {
+    font-family: 'Wisdom Script Regular';
+    src: url('../fonts/Wisdom\ Script\ Regular\ 400.otf');
+}
+@font-face {
+    font-family: 'Droid-serif';
+    src: url('../fonts/DroidSerif-Italic.ttf');
+}
 
 
 
@@ -14,19 +23,18 @@ $font-handwrite: 'Tangerine', cursive;
 body {
     margin: 0 auto;
     font-family: $font-text;
+    
 }
 a { 
     text-decoration: none;
     color: $main-color;
 }
 
-/* Splash */
-.splash {
-    background-image: url("../images/splash.jpg");
-    height: 100vh;
-    width: 100%;
-    position: relative;
+.subtitle {
+    font-family: $font-subtitles;
 }
+
+/* Splash */
 .nav-list {
     ul {
         list-style-type: none;
@@ -35,6 +43,7 @@ a {
         a:hover {
             color: $add-color;
         }
+        
         li {
             display: inline-block;
             position: relative;
@@ -61,10 +70,49 @@ a {
 	padding-left: 0;
 }
 .logo {
-    font-family: $font-handwrite;
-    font-size: 36px;
+    font-family: 'Wisdom Script Regular';
+    font-size: 24px;
     letter-spacing: 1px;
     a {
         color: $add-color;
+    }
+}
+.splash {
+    background-image: url("../images/splash.jpg");
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+.splash-inner {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	color: $main-color;
+    .subtitle {
+        font-size: 40px;
+        letter-spacing: -1px;
+    }
+    .splash-title {
+        font-size: 65px;
+        letter-spacing: -2px;
+        font-weight: 700;
+    }
+}
+button {
+    background-color: $add-color;
+    width: 200px;
+    height: 60px;
+    border-radius: 3px;
+    border-color: $add-color;
+}
+.btn {
+   
+    
+    font-weight: 700;
+    &:hover {
+        color: #000;
+
     }
 }
