@@ -45,19 +45,24 @@ p {
 h5 {
 	font-size: 18px;
 }
-
-/* Splash */
-.nav-list {
+.list {
 	ul {
 		list-style-type: none;
 		margin-top: 0;
 		font-size: 14px;
+		li {
+			display: inline-block;
+		}
+	}
+}
+
+/* Splash */
+.list {
+	ul {
 		a:hover {
 			color: $add-color;
 		}
-
 		li {
-			display: inline-block;
 			position: relative;
 			margin-left: 40px;
 			li {
@@ -66,17 +71,20 @@ h5 {
 				margin: 0;
 				text-align: center;
 				padding: 5px 0;
+				a {
+					color: #000;
+				}
 			}
-			ul {
+		ul {
 				display: none;
-			}
+		}
 		}
 	}
 }
-.nav-list li:hover ul {
+.list li:hover ul {
 	display: block;
 	position: absolute;
-	background: #bdc3c7;
+	background: $main-color;
 	left: 50%;
 	transform: translateX(-50%);
 	padding-left: 0;
@@ -142,7 +150,7 @@ button {
 	}
 }
 
-/* Porfolio */
+/* Portfolio */
 
 .portfolio {
 	background: #f7f7f7;
@@ -154,22 +162,32 @@ img {
 }
 .image {
 	position: relative;
-    
 }
 .image-overlay {
 	position: absolute;
 	left: 50%;
 	top: 0;
 	transform: translateX(-50%);
-	background-color: #3333;
+	background-color: #777777;
 	height: 300px;
-	width: 94%;
+	width: 92%;
 	object-fit: cover;
 	opacity: 0;
+	h4 {
+		position: absolute;
+        left: 50%;
+        top: 45%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+		border: 1px solid $add-color;
+		font-size: 10px;
+		color: $add-color;
+	}
 }
 
 .image-overlay:hover {
 	opacity: 0.5;
+	
 }
 .description {
 	text-align: center;
@@ -184,3 +202,37 @@ img {
 	}
 }
 /* Footer */
+.footer {
+	p {
+		font-size: 12px;
+		letter-spacing: 0;
+	}
+		span {
+			font-size: 0;
+		}
+	.list {
+		display: flex;
+		align-items: center;
+		ul {
+			margin: 0;
+		}
+		.copyright {
+			font-size: 10px;
+		}
+		li {
+			margin-left: 0;
+		}
+		a {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 30px;
+			width: 30px;
+			font-size: 15px;
+			border-radius: 50%;
+			background-color: #000;
+			color: $main-color;
+		}
+	}
+}
+
