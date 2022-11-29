@@ -58,6 +58,10 @@ h5 {
 }
 
 /* Splash */
+.list ul {
+  text-align: center;
+}
+
 .list ul a:hover {
   color: #fed136;
 }
@@ -96,6 +100,7 @@ h5 {
   font-family: "Wisdom Script Regular";
   font-size: 22px;
   letter-spacing: 1px;
+  text-align: center;
 }
 
 .logo a {
@@ -218,9 +223,19 @@ img {
 }
 
 /* Footer */
+.footer .fa-copyright {
+  font-size: 10px;
+  display: inline-block;
+}
+
+.footer .copyright {
+  text-align: center;
+}
+
 .footer p {
-  font-size: 12px;
+  font-size: 10px;
   letter-spacing: 0;
+  display: inline-block;
 }
 
 .footer span {
@@ -230,14 +245,11 @@ img {
 .footer .list {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .footer .list ul {
   margin: 0;
-}
-
-.footer .list .copyright {
-  font-size: 10px;
 }
 
 .footer .list li {
@@ -254,4 +266,20 @@ img {
   border-radius: 50%;
   background-color: #000;
   color: #fff;
+}
+
+/* Media */
+@media (max-width: 767px) {
+  .splash .splash-title {
+    font-size: 30px;
+  }
+  .splash .subtitle {
+    font-size: 16px;
+  }
+  .splash .list li:hover ul {
+    display: contents;
+  }
+  .splash .list li:hover ul li {
+    background: #fff;
+  }
 }
